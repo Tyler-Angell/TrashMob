@@ -19,10 +19,7 @@
 
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
-
                 var httpRequestMessage = new HttpRequestMessage();
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
 
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Get;
@@ -51,10 +48,7 @@
 
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
-
                 var httpRequestMessage = new HttpRequestMessage();
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
 
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Get;
@@ -81,10 +75,7 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
-
                 var httpRequestMessage = new HttpRequestMessage();
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
 
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Get;
@@ -107,12 +98,10 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
                 var httpRequestMessage = new HttpRequestMessage();
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Put;
 
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
                 httpRequestMessage.RequestUri = new Uri(EventsApi + "/" + mobEvent.Id);
 
                 httpRequestMessage.Content = JsonContent.Create(mobEvent, typeof(MobEvent), null, SerializerOptions);
@@ -134,12 +123,10 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
                 var httpRequestMessage = new HttpRequestMessage();
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Post;
 
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
                 httpRequestMessage.RequestUri = new Uri(EventsApi);
 
                 httpRequestMessage.Content = JsonContent.Create(mobEvent, typeof(MobEvent), null, SerializerOptions);
@@ -161,12 +148,10 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
                 var httpRequestMessage = new HttpRequestMessage();
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Delete;
 
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
                 httpRequestMessage.RequestUri = new Uri(EventsApi);
 
                 httpRequestMessage.Content = JsonContent.Create(cancelEvent, typeof(CancelEvent), null, SerializerOptions);
@@ -187,10 +172,7 @@
 
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
-
                 var httpRequestMessage = new HttpRequestMessage();
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
 
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Get;

@@ -15,10 +15,7 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
-
                 var httpRequestMessage = new HttpRequestMessage();
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
 
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Post;
@@ -40,10 +37,7 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
-
                 var httpRequestMessage = new HttpRequestMessage();
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
 
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Delete;

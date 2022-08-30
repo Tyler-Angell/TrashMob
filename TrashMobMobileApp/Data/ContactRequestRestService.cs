@@ -15,13 +15,11 @@
         {
             try
             {
-                //var userContext = await GetUserContext().ConfigureAwait(false);
                 contactRequest.Id = Guid.NewGuid().ToString();
 
                 var httpRequestMessage = new HttpRequestMessage();
                 httpRequestMessage = GetDefaultHeaders(httpRequestMessage);
                 httpRequestMessage.Method = HttpMethod.Post;
-                //httpRequestMessage.Headers.Add("Authorization", "BEARER " + userContext.AccessToken);
                 httpRequestMessage.RequestUri = ContactRequestApi;
 
                 httpRequestMessage.Content = JsonContent.Create(contactRequest, typeof(ContactRequest), null, SerializerOptions);
